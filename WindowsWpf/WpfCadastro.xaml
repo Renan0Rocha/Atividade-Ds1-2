@@ -1,0 +1,53 @@
+﻿<Window x:Class="AtividadeDS.WindowsWpf.WpfCadastro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AtividadeDS.WindowsWpf"
+        mc:Ignorable="d"
+        Title="WpfCadastro" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Label Content="Cadastro" FontSize="26" Margin="0 20" HorizontalAlignment="Center"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Grid.Column="0" Margin="20 0">
+                <Label Content="Dados Pessoais" FontSize="22" />
+                <Label Content="Nome:"/>
+                <TextBox x:Name="txtNome" Padding="6" />
+                <Label Content="Sobrenome:"/>
+                <TextBox x:Name="txtSobrenome" Padding="6"/>
+                <Label Content="Data de Nascimento:"/>
+                <DatePicker x:Name="dataNascimento" Padding="6"/>
+                <Label Content="CPF:"/>
+                <TextBox x:Name="txtCPF" Padding="6"/>
+                <Label Content="RG:"/>
+                <TextBox x:Name="txtRG" Padding="6"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Margin="20 0">
+                <Label Content="Dados da Conta" FontSize="22"/>
+                <Label Content="Email:"/>
+                <TextBox x:Name="txtEmail" Padding="6"/>
+                <Label Content="Usuário:"/>
+                <TextBox x:Name="txtUsuario" Padding="6"/>
+                <Label Content="Senha:"/>
+                <PasswordBox x:Name="pswSenha2" PasswordChar="*" Padding="6"/>
+                <Label Content="Confirmar Senha:"/>
+                <PasswordBox x:Name="pswSenha" PasswordChar="*" Padding="6"/>
+                <Button x:Name="btnSalvarUsuario" Content="Cadastrar-se" FontSize="14" Padding="10" Margin="17" Width="258" Background="#FF7266FF" BorderThickness="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnSalvarUsuario_Click"/>
+            </StackPanel>
+            
+        </Grid>
+        <Rectangle HorizontalAlignment="Center" Height="5" Margin="-5" Grid.Row="1" Stroke="#FF4D58FF" VerticalAlignment="Top" Width="800" Fill="#FF533DF1"/>
+
+    </Grid>
+</Window>

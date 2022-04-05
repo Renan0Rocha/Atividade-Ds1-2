@@ -1,0 +1,44 @@
+﻿<Window x:Class="AtividadeDS.WindowsWpf.WpfConversaoMoeda"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AtividadeDS.WindowsWpf"
+        mc:Ignorable="d"
+        Title="WpfConversaoMoeda" Height="480" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="160"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <Label Content="Conversão de Moedas" FontSize="40" HorizontalAlignment="Center" Margin="8"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <Label Content="Selecione a Moeda a ser convertida em Real (R$)" FontSize="20" HorizontalAlignment="Center" Margin="8"/>
+
+            <Image Source="/Imagens/dolarImage.png" Margin="0 -10 550 0" Width="152" Height="82"/>
+            <Button x:Name="btnDolar" Padding="8" Width="98" Content="Dolar $" Margin="0 -4 550 0" Height="32" Click="btnDolar_Click" BorderBrush="#FF707070" Background="#FFBCEF94"/>
+
+            <Image Source="/Imagens/Euro.png" Margin="0 -140 150 0" Width="134" Height="70"/>
+            <Button x:Name="btnEuro" Padding="8" Width="98" Content="Euro" Margin="0 -30 150 0" Height="32" Click="btnEuro_Click" Background="#FFBCEF94"/>
+
+            <Image Source="/Imagens/Libra.png" Margin="0 -140 -200 0" Width="135" Height="110"/>
+            <Button x:Name="btnLibra" Padding="8" Width="98" Content="Libra" Margin="0 -35 -200 0" Height="32" Click="btnLibra_Click" Background="#FFBCEF94"/>
+
+            <Image Source="/Imagens/bitcoin.png" Margin="0 -150 -550 0" Width="82" Height="83"/>
+            <Button x:Name="btnBitcoin" Padding="8" Width="98" Content="BitCoin" Margin="0 -35 -550 0" Height="32" Click="btnBitcoin_Click" Background="#FFBCEF94"/>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="2">
+            <Label Content="Insira o valor a ser convertido (EX: $12,50)" HorizontalAlignment="Center" Margin="10"/>
+            <TextBox x:Name="txtValor" Padding="8" Margin="0 0 0 0" Width="170" IsEnabled="False"/>
+            <Button x:Name="btnCalcular" Padding="8" Content="Calcular" Margin="20" Width="134" Click="btnCalcular_Click"/>
+            <TextBox x:Name="txtResultado" Padding="8" Margin="0" Width="170" IsEnabled="False"/>
+        </StackPanel>
+    </Grid>
+</Window>
